@@ -89,10 +89,10 @@
             regex = @"^4[0-9]{6,}$";
             break;
         case OLCreditCardTypeUnionPay:
-            regex = @"^(62|88)\d+$";
+            regex = @"^(62|88)\\d+$";
             break;
         case OLCreditCardTypeMaestro:
-            regex = @"^(5018|5020|5038|5612|5893|6304|6759|6761|6762|6763|0604|6390)\d+$";
+            regex = @"^(5018|5020|5038|5612|5893|6304|6759|6761|6762|6763|0604|6390)\\d+$";
             break;
         default:
             break;
