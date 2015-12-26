@@ -49,7 +49,7 @@
         return OLCreditCardTypeInvalid;
     }
     
-    NSArray *enums = @[@(OLCreditCardTypeAmex), @(OLCreditCardTypeDinersClub), @(OLCreditCardTypeDiscover), @(OLCreditCardTypeJCB), @(OLCreditCardTypeMastercard), @(OLCreditCardTypeVisa)];
+    NSArray *enums = @[@(OLCreditCardTypeUnionPay), @(OLCreditCardTypeMaestro), @(OLCreditCardTypeAmex), @(OLCreditCardTypeDinersClub), @(OLCreditCardTypeDiscover), @(OLCreditCardTypeJCB), @(OLCreditCardTypeMastercard), @(OLCreditCardTypeVisa)];
     
     __block OLCreditCardType type = OLCreditCardTypeInvalid;
     [enums enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
@@ -87,6 +87,12 @@
             break;
         case OLCreditCardTypeVisa:
             regex = @"^4[0-9]{6,}$";
+            break;
+        case OLCreditCardTypeUnionPay:
+            regex = @"^(62|88)\d+$";
+            break;
+        case OLCreditCardTypeMaestro:
+            regex = @"^(5018|5020|5038|5612|5893|6304|6759|6761|6762|6763|0604|6390)\d+$";
             break;
         default:
             break;
