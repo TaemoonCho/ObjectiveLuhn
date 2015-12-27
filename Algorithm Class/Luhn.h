@@ -17,6 +17,15 @@ typedef NS_ENUM(NSInteger, OLCreditCardType) {
     OLCreditCardTypeJCB,
     OLCreditCardTypeUnionPay,
     OLCreditCardTypeMaestro,
+    OLCreditCardTypeCarte,
+    OLCreditCardTypeLaser,
+    OLCreditCardTypeSolo,
+    OLCreditCardTypeSwitch,
+    /**** Icon not exist ****
+    OLCreditCardTypeBCGlobal,
+    OLCreditCardTypeVisaMaster,
+    OLCreditCardTypeInstaPayment,
+    *** Icon not exist *****/
     OLCreditCardTypeUnsupported,
     OLCreditCardTypeInvalid
 };
